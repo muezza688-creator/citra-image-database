@@ -1,0 +1,35 @@
+[build]
+  command = "python3 -m zipfile -e citra-bundle.zip site && node site/scripts/check.mjs"
+  publish = "site/public"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "site/netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=86400"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/api/images.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
