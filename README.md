@@ -1,12 +1,12 @@
 # Database Gambar Chatbot Citra
 
-Katalog Citra Bukit Etam berisi **64 aset**: 2 foto aktual, 27 halaman desain eksterior, dan 35 halaman desain interior. Sampul, daftar isi dan penutup yang tidak diperlukan dikeluarkan. Gambar berasal dari lampiran pengguna; tidak ada gambar AI tambahan.
+Katalog Citra Bukit Etam berisi **65 aset**: 2 foto aktual, 27 halaman desain eksterior, 35 halaman desain interior, dan 1 gambar site plan kavling. Sampul, daftar isi dan penutup yang tidak diperlukan dikeluarkan. Gambar berasal dari lampiran pengguna; tidak ada gambar AI tambahan.
 
 ## Isi
 
 - `public/data/catalog.json`: metadata lengkap, kategori, kata kunci, sumber halaman, ukuran dan hash gambar.
 - `public/api/images.json`: salinan katalog statis untuk integrasi sederhana.
-- `public/images/`: 64 gambar JPEG.
+- `public/images/`: 65 gambar JPEG.
 - `public/thumbnails/`: pratinjau untuk galeri.
 - `netlify/functions/images.mjs`: pencarian dengan filter dan pagination.
 - `katalog-gambar.csv`: indeks untuk pengelolaan manual.
@@ -48,3 +48,5 @@ Buka `http://localhost:4173` untuk galeri dan contoh API. Pratinjau lokal menyim
 Konfigurasi mengikuti [dokumentasi Netlify Functions](https://docs.netlify.com/build/functions/get-started/) dan [konfigurasi berbasis berkas](https://docs.netlify.com/build/configure-builds/file-based-configuration/).
 
 Hak gambar dan desain mengikuti pemilik sumber masing-masing. Kredit Diary Design Studio dipertahankan untuk dokumen interior.
+
+Label SOLD OUT pada site plan mengikuti gambar yang diterima 3 November 2026. Label tersebut bukan konfirmasi stok terkini.
